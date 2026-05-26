@@ -21,9 +21,8 @@ public class Panier {
     }
 
     public List<Article> getArticles() {
-        return articles;
+    return new ArrayList<>(articles);
     }
-
     public double getTotal() {
         return articles.stream()
                 .mapToDouble(Article::getPrix)
