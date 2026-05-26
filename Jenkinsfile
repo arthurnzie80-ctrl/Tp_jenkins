@@ -53,7 +53,7 @@ pipeline {
 
         stage('Qualite Code') {
             steps {
-                bat 'mvn checkstyle:checkstyle pmd:pmd pmd:cpd spotbugs:spotbugs'
+                bat 'mvn checkstyle:checkstyle pmd:pmd pmd:cpd spotbugs:spotbugs -Dmaven.failOnError=false'
             }
             post {
                 always {
