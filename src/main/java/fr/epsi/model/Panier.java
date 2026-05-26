@@ -6,6 +6,12 @@ import java.util.List;
 public class Panier {
     private List<Article> articles = new ArrayList<>();
 
+    public void ajouter(Article article, int quantite) {
+        for (int i = 0; i < quantite; i++) {
+            articles.add(article);
+        }
+    }
+
     public void ajouterArticle(Article article) {
         articles.add(article);
     }
